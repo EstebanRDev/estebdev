@@ -164,7 +164,7 @@ section{
 
 .home-content .text-animate{
     position: relative;
-    width: 32.8rem;
+    width: 27.8rem;
 }
 
 .home-content .text-animate h3{
@@ -854,6 +854,11 @@ span{
         margin-top: 2rem;
     }
 
+    .footer-text p{
+        font-size: 1rem;
+        justify-content: center;
+        text-align: center;
+    }      
     
 }
 
@@ -861,11 +866,10 @@ span{
     .home-sci{
         position:absolute;
         bottom: 2rem;
-        right: 1rem;
+        right: 4rem;
         width: 210px;
         justify-content: space-between; 
     }
-
 
     .home-sci a{
         position: relative;
@@ -876,7 +880,15 @@ span{
         height: 40px;
         font-size: 20px;
     }
-    
+
+    .home-content p{
+        position: relative;
+        font-size: 1.5rem;
+        margin: 2rem 0 2rem; 
+        max-width: 70%;
+       
+    }
+  
 
 }
 
