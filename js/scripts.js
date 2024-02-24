@@ -94,4 +94,17 @@ const senEmail = (e) =>{
 
 contactForm.addEventListener('submit', senEmail)
 
+//lenguage
 
+const check = document.querySelector(".check");
+
+check.addEventListener("click", lenguage);
+
+function lenguage(){
+    let id = check.checked;
+    if(id==true){
+        location.href = "../index_sp.html"; 
+    } else{
+        location.href = "../index.html"; 
+    }
+}
