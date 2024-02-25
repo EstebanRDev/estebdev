@@ -3,9 +3,9 @@
 
 window.onload = function() {
     setTimeout(function() {
-        $('#onload').fadeOut();
-        $('body').removeClass('hidden');
-    }, 1000); // 5000 milisegundos = 5 segundos
+        $('#preload').fadeOut();
+        //$('body').removeClass('hidden');
+    }, 850); // 5000 milisegundos = 5 segundos
 };
 
 
