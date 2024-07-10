@@ -331,7 +331,7 @@ section{
     display: flex;
     align-items: center;
     padding:0 9%;
-    background: url(/img/Backroud_2.jpg) no-repeat;
+    background: url(/img/Backgroud.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -937,6 +937,7 @@ span{
         font-size: 55%;
     }
 
+
 }
 
 
@@ -1036,7 +1037,9 @@ span{
     margin-top: 2rem;
    }
     .home{
-       background: url(/img/Phone.jpg);
+       background: url(/img/Responsive.png);
+       background-repeat: no-repeat;
+       background-size: cover;
     }
 
     .contact form .input-box .input-field{
