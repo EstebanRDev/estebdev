@@ -961,13 +961,6 @@ span{
         padding: 2rem 4%;
     }
 
-    .home{
-        background: url(/img/Responsive.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-     }
- 
-
 }
 
 @media (max-width: 768px){
