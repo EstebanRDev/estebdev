@@ -507,7 +507,7 @@ section{
 }
 
 .home-imgHover:hover{
-    background: #010914;
+    background: #010914c5;
     opacity: .9;
 }
 
@@ -545,7 +545,7 @@ span{
 }
 
 .about-img img {
-    width: 75%;
+    width: 80%;
     border-radius: 50%;
     border: .2rem solid var(--main-color);
     background: rgba(255, 255, 255, 0.932);
@@ -961,6 +961,13 @@ span{
         padding: 2rem 4%;
     }
 
+    .home{
+        background: url(/img/Responsive.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+     }
+ 
+
 }
 
 @media (max-width: 768px){
@@ -1059,10 +1066,88 @@ span{
         justify-content: center;
         text-align: center;
     }   
+
+    .home-imgHover{
+        display: none;
+    }
+    
     
 }
 
 @media (max-height: 768px) and (orientation: landscape) {
+    .header{
+        background: #01020633;
+    }
+
+    #menu-icon{
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background: rgba(8, 27, 41, 0.363);
+        z-index: 1;
+        transition: .25s ease;
+        transition-delay: .25s;
+    }
+
+    
+    .navbar.active{
+        left: 0;
+        transition-delay: 0s;
+    }
+
+    .navbar .active-nav{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(8, 27, 41, 0.5);
+        backdrop-filter: blur(10px); 
+        z-index: -1;
+        transition: .7s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active .active-nav{
+        left: 0;
+        transition-delay: .25s;   
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        transform: translateX(-20rem);
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active a{
+        transform: translateX(0);
+        transition-delay: .25s;
+    }
+
+    .home-imgHover{
+        pointer-events:none;
+        background: var(--bg-color);
+        opacity: .1;
+
+    }
+
+   .skills .skills-row{
+    display: block;
+   }
+   
+   .skills .skills-row .title{
+    margin-top: 2rem;
+   }
+    
     .home-sci{
         position:absolute;
         bottom: 2rem;
@@ -1086,7 +1171,10 @@ span{
         font-size: 1.5rem;
         margin: 2rem 0 2rem; 
         max-width: 70%;
-       
+    }
+
+    .home-imgHover{
+        display: none;
     }
 
   

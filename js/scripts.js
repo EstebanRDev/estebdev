@@ -77,7 +77,7 @@ const senEmail = (e) =>{
     emailjs.sendForm('service_exxzuh7', 'template_wtg4dho', '#contact-form', '6nWj1p2ujgOQpOB7C')
         .then(()=>{
             //Send message
-            ContactMessage.textContent ='Thank you, I will contact you shortly. ✅'
+            ContactMessage.textContent ='Thank you ✅'
 
             //Remove message after seconds
 
@@ -91,7 +91,7 @@ const senEmail = (e) =>{
 
         }, ()=>{
             //show error message
-            ContactMessage.textContent = 'Upps, se presentó un error ❌'
+            ContactMessage.textContent = 'Upps, error ❌'
         })
 }   
 
