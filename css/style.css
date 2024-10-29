@@ -17,6 +17,8 @@
     --second-bg-color: #0d293a;
     --text-color: #ededed;
     --main-color: #00abf0;
+    --notification-primary: #aaec8a;
+    --background: #0d110e; 
 }
 
 /* ocultar el contenido de un elementos que se sale de su contendedor*/
@@ -596,7 +598,7 @@ span{
 
 /* Estilos para las listas */
 
-.education{ 
+/* .education{ 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -635,7 +637,7 @@ span{
 
 /* creamos la propiedad de los puntos en las listas de education */
 
-.education-box .education-content::before{
+/* .education-box .education-content::before{
     content: '';
     position: absolute;
     top: 0;
@@ -688,7 +690,7 @@ span{
 .education-content .content p{
     font-size: 1.2rem;
     padding-top: .5rem;
-}
+} */ */
 
 .skills{
     min-height: auto;
@@ -970,6 +972,31 @@ span{
 
     #menu-icon{
         display: block;
+    }
+
+    
+    @keyframes fade-in {
+        5% {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        95% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes progress {
+        to {
+            transform: scaleX(1);
+        }
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
     }
 
     .navbar{
@@ -1270,6 +1297,8 @@ span{
     }
 }
 
+
+
     /* @media (max-width: 520px){
         html {
             font-size: 50%;
@@ -1296,3 +1325,71 @@ span{
        }
     } */
 
+    .wrapper{
+        margin-top: 2rem;
+    }
+    .title {
+        font-size: max(2vw, 24px);
+        line-height: 1.1;
+        padding-bottom: .4em;
+        color: rgb(255, 255, 255);
+        text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+        text-align: center;
+      }
+      
+      .text {
+        font-size: max(1vw, 13px);
+        text-align:center;
+        line-height: 1.9rem;
+        overflow: hidden;
+        padding-bottom: 20px;
+        color: rgba(255, 255, 255, 0.7);
+    
+      }
+      
+      .accordions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .accordion {
+        background: linear-gradient(200deg, rgb(7, 85, 158) 13.57%, rgb(19, 109, 194) 98.38%);
+        width: max(50vw, 280px);
+        padding: 25px 30px 10px;
+        border-radius: 15px;
+        margin-bottom: 40px;
+        box-shadow: 0 30px 30px -10px rgba(0, 0, 0, .3);
+        transition: all .3s;
+        
+        &:nth-child(2) {
+            background: linear-gradient(200deg, rgb(7, 85, 158) 13.57%, rgb(19, 109, 194) 98.38%);
+        }
+        
+        &:nth-child(3) {
+            background: linear-gradient(200deg, rgb(7, 85, 158) 13.57%, rgb(19, 109, 194) 98.38%);
+        }
+        
+        &:nth-child(4) {
+            background: linear-gradient(200deg, rgb(7, 85, 158) 13.57%, rgb(19, 109, 194) 98.38%);
+        }
+      }
+
+      .accordion:hover{
+        transform: scale(0.98);
+         border-radius: 20px;
+      }
+
+      .accordion:hover{
+        box-shadow: 0px 0px 30px 1px rgba(60, 31, 165, 0.966);
+      }
+      
+    
+      @media (max-width: 480px) {
+        .accordion {
+          padding: 15px 20px 8px;
+        }
+        .title {
+          font-size: 20px;
+        }
+      }

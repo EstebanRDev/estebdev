@@ -77,7 +77,7 @@ const senEmail = (e) =>{
     emailjs.sendForm('service_exxzuh7', 'template_wtg4dho', '#contact-form', '6nWj1p2ujgOQpOB7C')
         .then(()=>{
             //Send message
-            ContactMessage.textContent ='Thank you ✅'
+            ContactMessage.textContent ='En breve te respondo ✅'
 
             //Remove message after seconds
 
@@ -99,15 +99,15 @@ contactForm.addEventListener('submit', senEmail)
 
 //lenguage
 
-const check = document.querySelector(".check");
+// const check = document.querySelector(".check");
 
-check.addEventListener("click", lenguage);
+// check.addEventListener("click", lenguage);
 
-function lenguage(){
-    let id = check.checked;
-    if(id==true){
-        location.href = "../index_sp.html"; 
-    } else{
-        location.href = "../index.html"; 
-    }
-}
+// function lenguage(){
+//     let id = check.checked;
+//     if(id==true){
+//         location.href = "../index_sp.html"; 
+//     } else{
+//         location.href = "../index.html"; 
+//     }
+// }
