@@ -83,6 +83,7 @@ const senEmail = (e) => {
                         showConfirmButton: false,
                         timer: 1500
                     });
+                    contactForm.reset(); // Restablece el formulario después de mostrar la alerta
                 }
             }
         ).catch(
