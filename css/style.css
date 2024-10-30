@@ -1363,7 +1363,7 @@ span{
         transition: all .3s;
         
         &:nth-child(2) {
-            background: linear-gradient(200deg, rgb(7, 85, 158) 13.57%, rgb(19, 109, 194) 98.38%);
+            background: linear-gradient(200deg, rgb(7, 85, 158) 13.57%, rgba(5, 50, 92, 0.671) 98.38%);
         }
         
         &:nth-child(3) {
@@ -1371,17 +1371,17 @@ span{
         }
         
         &:nth-child(4) {
-            background: linear-gradient(200deg, rgb(7, 85, 158) 13.57%, rgb(19, 109, 194) 98.38%);
+            background: linear-gradient(200deg, rgb(7, 85, 158) 13.57%, rgba(5, 50, 92, 0.671) 98.38%);
         }
       }
 
       .accordion:hover{
         transform: scale(0.98);
-         border-radius: 20px;
+         border-radius: 25px;
       }
 
       .accordion:hover{
-        box-shadow: 0px 0px 30px 1px rgba(60, 31, 165, 0.966);
+        box-shadow: 0px 0px 30px 1px rgba(95, 59, 226, 0.966);
       }
       
     
