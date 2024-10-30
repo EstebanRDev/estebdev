@@ -66,36 +66,40 @@ window.onscroll = () =>{
 
 //email js
 
-const contactForm = document.getElementById('contact-form'),
-      ContactMessage = document.getElementById('message')
+const contactForm = document.getElementById('contact-form');
+const ContactMessage = document.getElementById('message');
 
-const senEmail = (e) =>{
-    e.preventDefault()
+const senEmail = (e) => {
+    e.preventDefault();
 
-    //service ID -templateId #form -publicKey
+    // service ID - templateId #form - publicKey
+    emailjs.sendForm('service_ikuri9y', 'template_wtg4dho', '#contact-form', 'Eco9R2XgyaAHHKdC9')
+        .then(
+            (response) => {
+                if (response.status === 200) { // Verifica si la respuesta fue exitosa
+                    Swal.fire({
+                        icon: "success",
+                        title: "En breve te respondo!",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            }
+        ).catch(
+            (error) => {
+                Swal.fire({
+                    icon: "error",
+                    title: "Upps, algo no anda bien",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                console.error("EmailJS error:", error); // Para verificar el error en consola si algo falla
+            }
+        );
+}
 
-    emailjs.sendForm('service_exxzuh7', 'template_wtg4dho', '#contact-form', '6nWj1p2ujgOQpOB7C')
-        .then(()=>{
-            //Send message
-            ContactMessage.textContent ='En breve te respondo ✅'
+contactForm.addEventListener('submit', senEmail);
 
-            //Remove message after seconds
-
-            setTimeout(()=>{
-                ContactMessage.textContent = ''
-            }, 5000)
-
-            //clean inputs
-
-            contactForm.reset()
-
-        }, ()=>{
-            //show error message
-            ContactMessage.textContent = 'Upps, error ❌'
-        })
-}   
-
-contactForm.addEventListener('submit', senEmail)
 
 //lenguage
 
